@@ -3,11 +3,11 @@ package com.buyf.activiti;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.annotation.ImportResource;
 
-@SpringBootApplication(
-//        scanBasePackages={"com.buyf.activiti"}
-)
+@SpringBootApplication(exclude ={SecurityAutoConfiguration.class} )
+
 @ImportResource(value = {"classpath*:mappers/*.xml"})
 @MapperScan("com.buyf.activiti.dao")
 public class ActivitiApplication {
