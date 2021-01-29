@@ -10,8 +10,16 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
 public class CodeGenerator {
-    private static String[] tableNames=new String[]{"user"};
+    private static String[] tableNames=new String[]{
+            "acl_permission",
+            "acl_role",
+            "acl_role_permission",
+            "acl_user",
+            "acl_user_role",
+    };
     private static String filePath = "D:\\generator";
+    private static String tablePre = "sys_";
+    private static String url = "jdbc:mysql://192.168.17.135:3306/sys_user?useUnicode=true&characterEncoding=utf-8";
 
 
     GlobalConfig gc = new GlobalConfig();
@@ -34,7 +42,7 @@ public class CodeGenerator {
     // 数据源配置
     private void dataSourceConfig(){
         // 数据源配置
-        dsc.setUrl("jdbc:mysql://192.168.243.128:3306/activiti?useUnicode=true&characterEncoding=utf-8");
+        dsc.setUrl(url);
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
@@ -59,7 +67,7 @@ public class CodeGenerator {
         strategy.setInclude(tableNames);
         strategy.setSuperEntityClass("com.buyf.activiti.entity.BasicEntity");
         strategy.setSuperEntityColumns("id","created_time","updated_time");
-
+        strategy.setTablePrefix(tablePre);
 //        strategy.setEntityLombokModel(true);
 //        strategy.setRestControllerStyle(true);
     }
