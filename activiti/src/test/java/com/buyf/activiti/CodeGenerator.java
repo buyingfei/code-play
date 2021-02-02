@@ -17,9 +17,9 @@ public class CodeGenerator {
             "sys_user",
             "sys_user_role",
     };
-    private static String filePath = "D:\\generator1";
+    private static String filePath = "D:\\generator2";
     private static String tablePre = "sys_";
-    private static String url = "jdbc:mysql://192.168.17.137:3306/user-center?useUnicode=true&characterEncoding=utf-8";
+    private static String url = "jdbc:mysql://192.168.17.138:3306/user-center?useUnicode=true&characterEncoding=utf-8";
 
 
     GlobalConfig gc = new GlobalConfig();
@@ -34,8 +34,8 @@ public class CodeGenerator {
         gc.setOutputDir(filePath);
         gc.setAuthor("buyf");
         gc.setOpen(false);
-        gc.setServiceName("%sRepo");
-        gc.setServiceImplName("%sRepoImpl");
+        gc.setServiceName("%sService");
+        gc.setServiceImplName("%sServiceImpl");
         gc.setMapperName("%sMapper");
         gc.setDateType(DateType.ONLY_DATE);
     }
@@ -53,8 +53,8 @@ public class CodeGenerator {
     private void packageConfig(){
         // 包配置
         pc.setParent("com.buyf.activiti");
-        pc.setService("repository");
-        pc.setServiceImpl("repository.impl");
+        pc.setService("service");
+        pc.setServiceImpl("service.impl");
         pc.setEntity("entity");
         pc.setMapper("dao");
         pc.setXml("dao");
