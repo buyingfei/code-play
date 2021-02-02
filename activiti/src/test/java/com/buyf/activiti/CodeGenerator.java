@@ -11,15 +11,15 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
 public class CodeGenerator {
     private static String[] tableNames=new String[]{
-            "acl_permission",
-            "acl_role",
-            "acl_role_permission",
-            "acl_user",
-            "acl_user_role",
+            "sys_permission",
+            "sys_role",
+            "sys_role_permission",
+            "sys_user",
+            "sys_user_role",
     };
-    private static String filePath = "D:\\generator";
+    private static String filePath = "D:\\generator1";
     private static String tablePre = "sys_";
-    private static String url = "jdbc:mysql://192.168.17.135:3306/sys_user?useUnicode=true&characterEncoding=utf-8";
+    private static String url = "jdbc:mysql://192.168.17.137:3306/user-center?useUnicode=true&characterEncoding=utf-8";
 
 
     GlobalConfig gc = new GlobalConfig();
