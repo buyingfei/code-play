@@ -13,5 +13,6 @@ import com.buyf.domain.user.entity.User;
  * @since 2021-02-02
  */
 public interface UserService extends IService<User> {
-
+    // 从数据库中取出用户信息
+    User selectByUsername(String username);
 }

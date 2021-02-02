@@ -1,5 +1,6 @@
 package com.buyf.domain.user.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.buyf.domain.user.dao.UserMapper;
 import com.buyf.domain.user.entity.User;
@@ -16,5 +17,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
-
+    @Override
+    public User selectByUsername(String username) {
+        return baseMapper.selectOne(new QueryWrapper<User>().eq("username", username));
+    }
 }
