@@ -1,4 +1,4 @@
-package com.buyf.deploy.component.config;
+package com.buyf.deploy.user.center.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,13 +1,13 @@
-package com.buyf.deploy.component;
+package com.buyf.deploy.user.center;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DeployComponentApplication {
+public class UserCenterApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DeployComponentApplication.class, args);
+        SpringApplication.run(UserCenterApplication.class, args);
     }
 
 }
