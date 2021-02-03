@@ -1,10 +1,9 @@
 package com.buyf.domain.user.repository;
 
 import com.buyf.common.tools.ObjectUtils;
-import com.buyf.domain.dto.UserDTO;
-import com.buyf.domain.repository.IUserRepo;
-import com.buyf.domain.user.entity.User;
+import com.buyf.domain.user.dto.UserDTO;
 import com.buyf.domain.user.service.UserService;
+import com.buyf.domain.user.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class UserRepo implements IUserRepo {

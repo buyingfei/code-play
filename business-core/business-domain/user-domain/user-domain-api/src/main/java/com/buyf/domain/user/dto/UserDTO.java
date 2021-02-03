@@ -1,4 +1,4 @@
-package com.buyf.domain.dto;
+package com.buyf.domain.user.dto;
 
 import lombok.Getter;
 import lombok.Setter;
