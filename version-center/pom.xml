@@ -2,20 +2,91 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>coding-share</artifactId>
-        <groupId>com.buyf</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
+<!--    <parent>-->
+<!--        <artifactId>coding-share</artifactId>-->
+<!--        <groupId>com.buyf</groupId>-->
+<!--        <version>0.0.1-SNAPSHOT</version>-->
+<!--    </parent>-->
 
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.buyf</groupId>
+    <version>0.0.1-SNAPSHOT</version>
     <artifactId>version-center</artifactId>
     <properties>
-        <spring.version>2.4.1</spring.version>
+        <spring.version>2.4.2</spring.version>
+        <spring-context.version>5.3.3</spring-context.version>
+        <commmon-utils.version>1.0-SNAPSHOT</commmon-utils.version>
+
+        <user-domain-api.version>0.0.1-SNAPSHOT</user-domain-api.version>
+        <user-domain-provider.version>0.0.1-SNAPSHOT</user-domain-provider.version>
+
+        <user-process-api.version>0.0.1-SNAPSHOT</user-process-api.version>
+        <user-process-provider.version>0.0.1-SNAPSHOT</user-process-provider.version>
+        <logback.version>1.2.3</logback.version>
+        <jackson.version>2.11.4</jackson.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!--            业务依赖管理starter-->
+            <dependency>
+                <groupId>com.buyf</groupId>
+                <artifactId>user-domain-api</artifactId>
+                <version>${user-domain-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.buyf</groupId>
+                <artifactId>user-domain-provider</artifactId>
+                <version>${user-domain-provider.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>user-process-api</artifactId>
+                <groupId>com.buyf</groupId>
+                <version>${user-process-api.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>user-process-provider</artifactId>
+                <groupId>com.buyf</groupId>
+                <version>${user-process-provider.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.buyf</groupId>
+                <artifactId>commmon-utils</artifactId>
+                <version>${commmon-utils.version}</version>
+            </dependency>
+<!--            业务依赖管理end-->
+
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <scope>compile</scope>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-access</artifactId>
+                <version>${logback.version}</version>
+
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring-context.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
@@ -94,7 +165,6 @@
                 <artifactId>commons-collections</artifactId>
                 <version>3.2.1</version>
             </dependency>
-
 
         </dependencies>
     </dependencyManagement>

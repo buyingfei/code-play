@@ -3,31 +3,27 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>user-domain</artifactId>
+        <artifactId>user-provider</artifactId>
         <groupId>com.buyf</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>user-domain-provider</artifactId>
+    <artifactId>user-process-provider</artifactId>
+
     <dependencies>
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <artifactId>user-process-api</artifactId>
+            <groupId>com.buyf</groupId>
         </dependency>
         <dependency>
             <groupId>com.buyf</groupId>
             <artifactId>user-domain-api</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.buyf</groupId>
             <artifactId>commmon-utils</artifactId>
         </dependency>
     </dependencies>
-
 </project>

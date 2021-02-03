@@ -10,6 +10,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>business-process</artifactId>
-
+    <modules>
+        <module>user-process</module>
+    </modules>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <artifactId>version-center</artifactId>
+                <groupId>com.buyf</groupId>
+                <version>0.0.1-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
