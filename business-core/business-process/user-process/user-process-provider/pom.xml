@@ -10,7 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>user-process-provider</artifactId>
-
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
     <dependencies>
         <dependency>
             <artifactId>user-process-api</artifactId>
@@ -24,6 +26,14 @@
         <dependency>
             <groupId>com.buyf</groupId>
             <artifactId>commmon-utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.buyf</groupId>
+            <artifactId>user-domain-api</artifactId>
         </dependency>
     </dependencies>
 </project>

@@ -1,11 +1,17 @@
 package com.buyf.domain.user.dto;
 
+import com.buyf.common.dto.PageQuery;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * @author buyf
+ * @date 2021/2/3 15:40
+ * @desc
+ */
 @Getter
 @Setter
-public class UserDTO {
+public class UserDTO extends PageQuery {
     private static final long serialVersionUID = 1L;
     private Integer id;
     /**
@@ -37,4 +43,5 @@ public class UserDTO {
      * 逻辑删除 1（true）已删除， 0（false）未删除
      */
     private Boolean isDeleted;
+
 }
