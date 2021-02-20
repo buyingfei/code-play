@@ -31,9 +31,5 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.buyf</groupId>
-            <artifactId>user-domain-api</artifactId>
-        </dependency>
     </dependencies>
 </project>

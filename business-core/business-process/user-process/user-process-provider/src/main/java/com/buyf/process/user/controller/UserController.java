@@ -22,7 +22,7 @@ public class UserController implements IUserController {
     @PostMapping("/queryByUsername")
     @Override
     public UserDTO queryByUsername(@PathVariable("username") String username){
-         return userRepo.selectByUsername(username);
+        return userRepo.selectByUsername(username);
     }
 }
 

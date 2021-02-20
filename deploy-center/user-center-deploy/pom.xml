@@ -17,6 +17,10 @@
             <groupId>com.buyf</groupId>
             <artifactId>user-process-provider</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.buyf</groupId>
+            <artifactId>user-domain-provider</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
