@@ -12,6 +12,7 @@
         <module>business-core</module>
         <module>version-center</module>
         <module>deploy-center</module>
+        <module>common-base</module>
     </modules>
     <name>coding-share</name>
     <description>Demo project for Spring Boot</description>
