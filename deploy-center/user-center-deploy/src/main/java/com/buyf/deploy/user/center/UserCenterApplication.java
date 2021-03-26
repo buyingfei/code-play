@@ -1,5 +1,6 @@
 package com.buyf.deploy.user.center;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
                 "com.buyf.process.user",
         }
 )
+@MapperScan(value = {"com.buyf.domain.user"})
 public class UserCenterApplication {
 
     public static void main(String[] args) {
