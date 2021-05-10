@@ -1,4 +1,4 @@
-package com.buyf.deploy.user.center;
+package com.buyf.deploy.user.center.api;
 
 public class FieldsDTO {
     @ParamProperty(paramsName ="是否是基础产品",dataType="varchar",allowableEnum = YesOrNoEnum.class)

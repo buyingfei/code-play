@@ -1,4 +1,4 @@
-package com.buyf.deploy.user.center;
+package com.buyf.deploy.user.center.api;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;

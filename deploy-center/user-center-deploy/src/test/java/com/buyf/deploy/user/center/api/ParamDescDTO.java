@@ -1,4 +1,4 @@
-package com.buyf.deploy.user.center;
+package com.buyf.deploy.user.center.api;
 
 public class ParamDescDTO {
     private Integer intefacePkId;
