@@ -1,25 +1,28 @@
 package com.buyf.deploy.user.center;
 
+import java.util.List;
 
 public class ChildrenDTO {
     @ParamPropertyList(
-            type = ParamPropertyTypeEnum.RECURSION,
-            paramProperty={
-        @ParamProperty(paramsName ="产品编码",dataType="varchar"),
-        @ParamProperty(paramsName ="险种编码",dataType="varchar"),
-        @ParamProperty(paramsName ="计划编码",dataType="varchar"),
-    })
+            paramProperty = {
+                    @ParamProperty(paramsName = "产品编码", dataType = "varchar"),
+                    @ParamProperty(paramsName = "险种编码", dataType = "varchar"),
+                    @ParamProperty(paramsName = "计划编码", dataType = "varchar"),
+            })
     private String code;
+
     @ParamPropertyList(
-            type = ParamPropertyTypeEnum.RECURSION,
-            paramProperty={
-                    @ParamProperty(paramsName ="产品名称",dataType="varchar"),
-                    @ParamProperty(paramsName ="险种名称",dataType="varchar"),
-                    @ParamProperty(paramsName ="计划名称",dataType="varchar"),
+            paramProperty = {
+                    @ParamProperty(paramsName = "产品名称", dataType = "varchar"),
+                    @ParamProperty(paramsName = "险种名称", dataType = "varchar"),
+                    @ParamProperty(paramsName = "计划名称", dataType = "varchar"),
             })
     private String name;
+    @ParamProperty(dataType = "object", paramsName = "fieldsDto")
     private FieldsDTO fieldsDto;
-    private ChildrenDTO childrenDTO;
+    @ParamProperty(dataType = "object", paramsName = "childrenDTO")
+    private List<ChildrenDTO> childrenDTO;
+
 
     public String getCode() {
         return code;
@@ -45,11 +48,14 @@ public class ChildrenDTO {
         this.fieldsDto = fieldsDto;
     }
 
-    public ChildrenDTO getChildrenDTO() {
+    public List<ChildrenDTO> getChildrenDTO() {
         return childrenDTO;
     }
 
-    public void setChildrenDTO(ChildrenDTO childrenDTO) {
+    public void setChildrenDTO(List<ChildrenDTO> childrenDTO) {
         this.childrenDTO = childrenDTO;
     }
+
 }
+
+

@@ -8,11 +8,11 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ParamPropertyList {
-    ParamPropertyTypeEnum type() default ParamPropertyTypeEnum.RECURSION;
     String paramsName() default "";
     String dataType() default "";
     String defaultValue() default "";
     int index() default 0;
     String showField() default "";
     ParamProperty[] paramProperty();
+
 }

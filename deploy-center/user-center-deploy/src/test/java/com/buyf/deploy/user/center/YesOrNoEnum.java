@@ -1,15 +1,16 @@
 package com.buyf.deploy.user.center;
 
-public enum  ParamPropertyTypeEnum {
-    RECURSION(1,"递归")
-    ;
-    private Integer code;
-    private String desc;
+public enum YesOrNoEnum {
 
-    ParamPropertyTypeEnum(Integer code, String desc) {
+    YES(1,"YES"),
+        NO(2,"NO");
+     YesOrNoEnum(Integer code, String desc) {
         this.code = code;
         this.desc = desc;
     }
+
+    Integer code;
+    String desc;
 
     public Integer getCode() {
         return code;
