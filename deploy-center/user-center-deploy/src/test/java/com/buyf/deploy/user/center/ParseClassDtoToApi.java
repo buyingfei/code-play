@@ -158,13 +158,7 @@ public class ParseClassDtoToApi {
                     if (paramDescDTO != null) {
                         paramDescDTOList.add(paramDescDTO);
                     }
-                } else if (classFieldSelfReferSize > 0) {
-                    // 自引用类
-                    List<ParamDescDTO> paramDescDTOList1 = parseFieldSelfReferenceClass(classFieldSelfReferSize, declaredField.getDeclaringClass(), pid);
-                    if (paramDescDTOList1 != null && paramDescDTOList1.size() > 1) {
-                        paramDescDTOList.addAll(paramDescDTOList1);
-                    }
-                } else {
+                }  else {
                     // 普通引用类型
                     ParamProperty annotation = declaredField.getAnnotation(ParamProperty.class);
                     String referPid = pid;
